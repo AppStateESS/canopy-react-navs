@@ -1,5 +1,5 @@
 const path = require('path')
-/* global __dirname */
+/* global __dirname, module */
 
 module.exports = {
   entry: './src/index.js',
@@ -21,7 +21,7 @@ module.exports = {
         include: path.resolve(__dirname, 'src'),
         loader: 'babel-loader',
         query: {
-          presets: ['env', 'react',]
+          presets: ['@babel/preset-env', '@babel/preset-react',]
         }
       },
     ]
